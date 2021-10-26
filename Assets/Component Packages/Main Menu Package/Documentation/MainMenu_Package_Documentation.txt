@@ -1,0 +1,16 @@
+Main Menu Package Documentation by Fiona Chung
+
+This package includes a main menu prefab with a:
+- Play button
+- Options button and page
+- Credits button and page
+- Quit button
+- Back button on the option and credits pages
+
+The MainMenuController script controls the play and quit button actions.
+
+All of the buttons are connected and work as they should, which can be seen in the example. The options, credits and back buttons are controlled by the on click function within the inspector. The play and quit buttons are tested in the example scene by the use of a debug.log within the MainMenuController script. 
+
+The options and credits pages are empty game objects in which child objects can be created or placed to customize and populate them. 
+The main menu game object can be moved around in the scene for customization. 
+The buttons use TextMeshPro, but this is optional and an image can be added for the buttons instead.

@@ -1,0 +1,15 @@
+Bar Package By Fiona Chung
+
+This package contains:
+- A bar slider:
+	• When the value of the bar is reduced it will change color
+	• The border image of the bar is placeholder only and can be replaced
+- An example scene showing how the bar can be used with a player
+
+The bar can be used for multiple purposes, for example to visually show health or any other statistics/information important for the player to see.
+
+When adding the bar to your scene, it must be placed inside of a canvas, since it is a UI object. The canvas requires an EventSystem to function. 
+
+To be able to use the bar on a player or other objects, the script connected to a player must reference the BarSlider script. The Player script within the example folder shows the necessary code that can be added to an existing script. In this script, as an example, the bar's value is reduced through the space key code input, but this can be adjusted to suit any needs. The last step in correctly connecting the bar package to a project, the ValueBar will have to be dragged into the Bar Slider slot in the script for the player/enemy/etc. 
+
+The maxValue for the bar can be adjusted within the inspector under the slider component of the ValueBar, but it is more useful to add this value in the script of your player/enemy/etc. 
