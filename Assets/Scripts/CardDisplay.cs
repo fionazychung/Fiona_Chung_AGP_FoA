@@ -15,13 +15,13 @@ public class CardDisplay : MonoBehaviour
     public TMP_Text attackText;
     public TMP_Text defenseText;
     public TMP_Text turnNoText;
-    //public TMP_Text turnCountdownText;
-    //public TMP_Text healthText;
 
     public int playerAttackValue;
     public int playerDefenseValue;
     public int enemyAttackValue;
     public int enemyDefenseValue;
+    public string playerSuit;
+    public string enemySuit;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +60,10 @@ public class CardDisplay : MonoBehaviour
     {
         playerDefenseValue = card.defense;
     }
+    public void CopyCardSuit()
+    {
+        playerSuit = card.suit;
+    }
 
     public void CopyEnemyAttack()
     {
@@ -69,6 +73,10 @@ public class CardDisplay : MonoBehaviour
     {
         enemyDefenseValue = card.defense;
         //print(enemyDefenseValue);
+    }
+    public void CopyEnemySuit()
+    {
+        enemySuit = card.suit;
     }
 
 

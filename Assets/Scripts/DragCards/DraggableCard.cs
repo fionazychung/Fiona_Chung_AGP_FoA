@@ -9,14 +9,17 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private Vector3 returnPosition;
     private CanvasGroup cvGroup;
     PlayerCardUsageSystem playerCardSystem;
+    CardSelection cardSelection;
 
     public Card PlayedCard;
+    public Card PickedCard;
 
     // Start is called before the first frame update
     void Start()
     {
         cvGroup = GetComponent<CanvasGroup>();
         playerCardSystem = transform.parent.GetComponent<PlayerCardUsageSystem>();
+        cardSelection = transform.parent.GetComponent<CardSelection>();
 
     }
 
@@ -28,10 +31,17 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("On begin drag");
+        //Debug.Log("On begin drag");
         if (cvGroup.interactable)
         {
-            playerCardSystem.selectedCard = GetComponent<HandCardDisplay>();
+            if (playerCardSystem != null)
+            {
+                playerCardSystem.selectedCard = GetComponent<HandCardDisplay>();
+            }
+            if (cardSelection != null)
+            {
+                cardSelection.selectedCard = GetComponent<CardDisplay>();
+            }
             returnPosition = transform.position;
             cvGroup.blocksRaycasts = false;
         }
@@ -50,10 +60,22 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         if (cvGroup.interactable)
         {
-            playerCardSystem.PlayCard();
-            if (playerCardSystem.cardHasLeftPlayerHandZone)
+            if (playerCardSystem != null)
             {
-                PlayedCard = playerCardSystem.selectedCard.card;
+                playerCardSystem.PlayCard();
+                if (playerCardSystem.cardHasLeftPlayerHandZone)
+                {
+                    PlayedCard = playerCardSystem.selectedCard.card;
+                }
+            }
+            if (cardSelection != null)
+            {
+                Debug.Log($"{eventData.pointerCurrentRaycast.gameObject}");
+                cardSelection.PickCard();
+                if (cardSelection.cardHasLeftDeckZone)
+                {
+                    PickedCard = cardSelection.selectedCard.card;
+                }
             }
 
             cvGroup.blocksRaycasts = true;

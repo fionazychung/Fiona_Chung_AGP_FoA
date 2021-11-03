@@ -47,5 +47,6 @@ public class PlayerCardUsageSystem : MonoBehaviour
     {
         CardCountdown();
         selectedCard.CopyTurnNo();
+        // remove the current scriptable card data from the player card
     }
 }

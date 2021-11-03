@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6eae8b124891143d7b19da7009c64f06, type: 3}
-  m_Name: Temperance
+  m_Name: Judgement
   m_EditorClassIdentifier: 
-  name: Temperance
+  name: Judgement
   artwork: {fileID: 0}
-  attack: 14
-  defense: 14
+  attack: 15
+  defense: 10
   turnNo: 3
   health: 0
-  suit: Fire
+  suit: Earth

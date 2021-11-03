@@ -40,6 +40,7 @@ public class CombatSystem : MonoBehaviour
 
     void Start()
     {
+
         state = CombatState.START;
         StartCoroutine(SetupBattle());
 
@@ -74,16 +75,10 @@ public class CombatSystem : MonoBehaviour
         {
             state = CombatState.DEFENDTURN;
         }
-        /*GameObject 
-        Card cardSetup = deck.SetupCards();*/
+         
+        //Card cardSetup = deck.SetupCards();
 
-        //GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
-        //playerUnit = playerGO.GetComponent<Units>();
-
-        //GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-        //enemyUnit = enemyGO.GetComponent<Units>();
-
-        //dialogueText.text = " " + enemyUnit.unitName + " ";
+        
 
         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
@@ -97,8 +92,6 @@ public class CombatSystem : MonoBehaviour
     {
         playerCardDisplay.CopyCardAttack();
         enemyCardDisplay.CopyEnemyDefense();
-
-        //print (playerCardDisplay.playerAttackValue);
 
         int result = playerCardDisplay.playerAttackValue - enemyCardDisplay.enemyDefenseValue;
         bool isDead = false;
@@ -141,7 +134,6 @@ public class CombatSystem : MonoBehaviour
 
     IEnumerator PlayerDefend()
     {
-        //dialogueText.text = enemyUnit.unitName + " attacks!";
         playerCardDisplay.CopyCardDefense();
         playerCardDisplay.CopyEnemyAttack();
 

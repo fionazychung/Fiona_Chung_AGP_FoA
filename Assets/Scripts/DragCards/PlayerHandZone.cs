@@ -7,27 +7,50 @@ public class PlayerHandZone : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 {
     [SerializeField]
     private PlayerCardUsageSystem playerCardSystem;
+    private CardSelection cardSelection;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerCardSystem = GetComponent<PlayerCardUsageSystem>();
+        if (playerCardSystem != null)
+        {
+            playerCardSystem = GetComponent<PlayerCardUsageSystem>();
+        }
+        if (cardSelection != null)
+        {
+            cardSelection = GetComponent<CardSelection>();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        playerCardSystem.cardHasLeftPlayerHandZone = false;
+        if (playerCardSystem != null)
+        {
+            playerCardSystem.cardHasLeftPlayerHandZone = false;
+        }
+        if (cardSelection != null)
+        {
+            cardSelection.cardHasLeftDeckZone = false;
+        }
     }
     public void OnPointerExit(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
         {
-            playerCardSystem.cardHasLeftPlayerHandZone = true;
+            if (playerCardSystem != null)
+            {
+                playerCardSystem.cardHasLeftPlayerHandZone = true;
+            }
+            if (cardSelection != null)
+            {
+                cardSelection.cardHasLeftDeckZone = true;
+            }
+
         }
     }
 }
+
+/*public class PlayerDeckZone : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+{
+
+}*/

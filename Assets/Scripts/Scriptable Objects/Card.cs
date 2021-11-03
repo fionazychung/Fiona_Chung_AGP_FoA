@@ -14,6 +14,7 @@ public class Card : ScriptableObject
     public int defense;
     public int turnNo;
     public int health;
+    public string suit;
 
 
 }

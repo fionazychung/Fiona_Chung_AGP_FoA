@@ -17,3 +17,5 @@ MonoBehaviour:
   attack: 7
   defense: 7
   turnNo: 1
+  health: 0
+  suit: Water

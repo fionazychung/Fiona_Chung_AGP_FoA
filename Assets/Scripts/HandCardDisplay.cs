@@ -23,6 +23,7 @@ public class HandCardDisplay : MonoBehaviour
     public int enemyAttackValue;
     public int enemyDefenseValue;
     public int countdownNo;
+    public string playerSuit;
 
     public CanvasGroup cvGroup;
 
@@ -63,7 +64,6 @@ public class HandCardDisplay : MonoBehaviour
         {
             playerAttackValue = card.attack;
         }
-        //print(playerAttackValue);
     }
     public void CopyCardDefense()
     {
@@ -77,7 +77,6 @@ public class HandCardDisplay : MonoBehaviour
     public void CopyEnemyDefense()
     {
         enemyDefenseValue = card.defense;
-        //print(enemyDefenseValue);
     }
 
     public void CopyTurnNo()

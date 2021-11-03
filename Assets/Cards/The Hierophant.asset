@@ -17,3 +17,5 @@ MonoBehaviour:
   attack: 5
   defense: 5
   turnNo: 1
+  health: 0
+  suit: Air

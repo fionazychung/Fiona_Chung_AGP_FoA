@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6eae8b124891143d7b19da7009c64f06, type: 3}
-  m_Name: Temperance
+  m_Name: The Lovers
   m_EditorClassIdentifier: 
-  name: Temperance
+  name: The Lovers
   artwork: {fileID: 0}
-  attack: 14
-  defense: 14
-  turnNo: 3
+  attack: 3
+  defense: 6
+  turnNo: 1
   health: 0
   suit: Fire

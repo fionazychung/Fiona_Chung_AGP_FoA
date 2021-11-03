@@ -821,6 +821,8 @@ MonoBehaviour:
   playerDefenseValue: 0
   enemyAttackValue: 0
   enemyDefenseValue: 0
+  playerSuit: 
+  enemySuit: 
 --- !u!1 &4426715179317270851
 GameObject:
   m_ObjectHideFlags: 0
