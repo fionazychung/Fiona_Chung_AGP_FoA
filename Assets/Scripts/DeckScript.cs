@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DeckScript
 {
+    //public List<Card> PlayerDeck = new List<Card>();
+
+
     public DeckScript(DeckListObject deckToCreate)
     {
         deck = new List<Card>();

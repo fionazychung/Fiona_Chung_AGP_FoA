@@ -334,6 +334,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2008d995e8701437c897d5c37be6f760,
         type: 2}
+    - target: {fileID: 7603888487914221953, guid: 0c3c2194ff6604f16b74eac79a14a129,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 1418776669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c3c2194ff6604f16b74eac79a14a129, type: 3}
 --- !u!224 &142621492 stripped
@@ -924,6 +929,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7603888487914221953, guid: 0c3c2194ff6604f16b74eac79a14a129,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 1418776669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c3c2194ff6604f16b74eac79a14a129, type: 3}
 --- !u!224 &761196221 stripped
@@ -1432,6 +1442,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7603888487914221953, guid: 0c3c2194ff6604f16b74eac79a14a129,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 1418776669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c3c2194ff6604f16b74eac79a14a129, type: 3}
 --- !u!224 &1062329569 stripped
@@ -1470,7 +1485,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck: []
-  hand: []
+  hand:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playingHand: []
 --- !u!4 &1116215994
 Transform:
   m_ObjectHideFlags: 0
@@ -1846,6 +1866,7 @@ MonoBehaviour:
   - {fileID: 850003263}
   - {fileID: 869227075}
   - {fileID: 1535182327}
+  inGame: 0
   cardHasLeftPlayerHandZone: 0
 --- !u!114 &1418776670
 MonoBehaviour:
@@ -2177,6 +2198,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8008e6d4a55a8469698ac47030238517,
         type: 2}
+    - target: {fileID: 7603888487914221953, guid: 0c3c2194ff6604f16b74eac79a14a129,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 1418776669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c3c2194ff6604f16b74eac79a14a129, type: 3}
 --- !u!224 &1538280394 stripped
@@ -2308,6 +2334,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7603888487914221953, guid: 0c3c2194ff6604f16b74eac79a14a129,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 1418776669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c3c2194ff6604f16b74eac79a14a129, type: 3}
 --- !u!224 &1601818346 stripped
@@ -2363,7 +2394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1609.8461}
+  m_AnchoredPosition: {x: 0, y: -1609.8472}
   m_SizeDelta: {x: 2650, y: 3431.3833}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1616380164
@@ -2583,7 +2614,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 707284667}
   m_HandleRect: {fileID: 707284666}
   m_Direction: 3
-  m_Value: 1
+  m_Value: 1.0000005
   m_Size: 0.33261153
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2749,6 +2780,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 74efef158c213465faf0c4834eacb648,
         type: 2}
+    - target: {fileID: 7603888487914221953, guid: 0c3c2194ff6604f16b74eac79a14a129,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 1418776669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c3c2194ff6604f16b74eac79a14a129, type: 3}
 --- !u!224 &1699703108 stripped
@@ -3282,6 +3318,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7603888487914221953, guid: 0c3c2194ff6604f16b74eac79a14a129,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 1418776669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c3c2194ff6604f16b74eac79a14a129, type: 3}
 --- !u!224 &1871702196 stripped
@@ -3407,6 +3448,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7603888487914221953, guid: 0c3c2194ff6604f16b74eac79a14a129,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 1418776669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c3c2194ff6604f16b74eac79a14a129, type: 3}
 --- !u!224 &1925896260 stripped
@@ -3807,5 +3853,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7603888487914221953, guid: 0c3c2194ff6604f16b74eac79a14a129,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 1418776669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c3c2194ff6604f16b74eac79a14a129, type: 3}

@@ -7,7 +7,10 @@ public class GameData : MonoBehaviour
     public static GameData instance;
 
     public List<CardDisplay> deck;
-    public List<HandCardDisplay> hand;
+    public List<Card> hand = new List<Card>(4);
+    public List<HandCardDisplay> playingHand;
+
+    public HandScript handScript;
 
     private void Awake()
     {
@@ -21,4 +24,29 @@ public class GameData : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Start()
+    {
+
+        /*if (hand.Count != 0)
+        {
+            //handScript.AddCard();
+            foreach (HandCardDisplay card in hand)
+            {
+                hand.Add(card);
+
+            }
+        }
+        else
+        {
+
+        }*/
+    }
+    /*private void Update()
+    {
+        foreach (HandCardDisplay card in hand)
+        {
+            hand.Add(card);
+        }
+    }*/
 }

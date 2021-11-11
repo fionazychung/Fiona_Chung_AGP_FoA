@@ -234,7 +234,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 220933814}
-        m_MethodName: ReturnToMain
+        m_MethodName: StageSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -404,6 +404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCardHand (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2330471903774283568, guid: 195ffc5419106471e8019381de5398a6,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 707953173}
     - target: {fileID: 4090886204691667131, guid: 195ffc5419106471e8019381de5398a6,
         type: 3}
       propertyPath: card
@@ -1325,6 +1330,7 @@ MonoBehaviour:
   - {fileID: 138689478}
   - {fileID: 249107409}
   - {fileID: 1399537189}
+  inGame: 1
   cardHasLeftPlayerHandZone: 0
 --- !u!1 &717450158 stripped
 GameObject:
@@ -1705,6 +1711,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCardHand (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2330471903774283568, guid: 195ffc5419106471e8019381de5398a6,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 707953173}
     - target: {fileID: 4090886204691667131, guid: 195ffc5419106471e8019381de5398a6,
         type: 3}
       propertyPath: card
@@ -2057,6 +2068,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCardHand (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2330471903774283568, guid: 195ffc5419106471e8019381de5398a6,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 707953173}
     - target: {fileID: 4090886204691667131, guid: 195ffc5419106471e8019381de5398a6,
         type: 3}
       propertyPath: card
@@ -2193,6 +2209,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCardHand
       objectReference: {fileID: 0}
+    - target: {fileID: 2330471903774283568, guid: 195ffc5419106471e8019381de5398a6,
+        type: 3}
+      propertyPath: playerCardSystem
+      value: 
+      objectReference: {fileID: 707953173}
     - target: {fileID: 4090886204691667131, guid: 195ffc5419106471e8019381de5398a6,
         type: 3}
       propertyPath: card

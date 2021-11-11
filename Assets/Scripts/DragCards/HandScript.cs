@@ -14,11 +14,11 @@ public class HandScript
     private List<HandCardDisplay> hand;
     private int maxHandSize;
 
-    public void addCard(HandCardDisplay card)
+    public void AddCard(HandCardDisplay card)
     {
         hand.Add(card);
     }
-    public int getMaxHandSize()
+    public int GetMaxHandSize()
     {
         return maxHandSize;
     }

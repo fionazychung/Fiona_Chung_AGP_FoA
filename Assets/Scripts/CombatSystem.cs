@@ -36,7 +36,7 @@ public class CombatSystem : MonoBehaviour
     public TMP_Text turnText;
     public Image attackTurnImage;
     public Image defeneseTurnImage;
-    
+
 
     void Start()
     {
@@ -78,7 +78,7 @@ public class CombatSystem : MonoBehaviour
          
         //Card cardSetup = deck.SetupCards();
 
-        
+        //set the randomization of enemy card acording to levels 
 
         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);

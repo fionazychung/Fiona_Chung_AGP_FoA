@@ -8,7 +8,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 {
     private Vector3 returnPosition;
     private CanvasGroup cvGroup;
-    PlayerCardUsageSystem playerCardSystem;
+    public PlayerCardUsageSystem playerCardSystem;
     CardSelection cardSelection;
 
     public Card PlayedCard;
@@ -18,7 +18,6 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     void Start()
     {
         cvGroup = GetComponent<CanvasGroup>();
-        playerCardSystem = transform.parent.GetComponent<PlayerCardUsageSystem>();
         cardSelection = transform.parent.GetComponent<CardSelection>();
 
     }
@@ -71,7 +70,11 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             if (cardSelection != null)
             {
                 Debug.Log($"{eventData.pointerCurrentRaycast.gameObject}");
+                HandCardDisplay handCard = eventData.pointerCurrentRaycast.gameObject.GetComponent<HandCardDisplay>();
+                //Debug.Log($"{playerCardSystem}");
+                playerCardSystem.CopyCard(cardSelection.selectedCard.card, handCard);
                 cardSelection.PickCard();
+
                 if (cardSelection.cardHasLeftDeckZone)
                 {
                     PickedCard = cardSelection.selectedCard.card;

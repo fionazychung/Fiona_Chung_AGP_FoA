@@ -10,8 +10,31 @@ public class PlayerCardUsageSystem : MonoBehaviour
     public HandCardDisplay selectedCard;
     public CardDisplay cardDisplay;
     public HandCardDisplay [] hand;
+    public bool inGame = true;
 
     public bool cardHasLeftPlayerHandZone = false;
+
+
+    private void Start()
+    {
+        if (inGame)
+        {
+            for (int i = 0; i < 4; ++i)
+            {
+                List<Card> dataHand = GameData.instance.hand;
+                List<HandCardDisplay> dataPlayingHand = GameData.instance.playingHand;
+                if (dataHand[i] != null)
+                {
+                    //Debug.Log($"copy hand{i}");
+                    hand[i].CopyCard(dataHand[i]);
+                }
+                else
+                {
+                    hand[i].gameObject.SetActive(false);
+                }
+            }
+        }
+    }
 
     public void PlayCard()
     {
@@ -48,5 +71,13 @@ public class PlayerCardUsageSystem : MonoBehaviour
         CardCountdown();
         selectedCard.CopyTurnNo();
         // remove the current scriptable card data from the player card
+    }
+
+    internal void CopyCard(Card card, HandCardDisplay handCard)
+    {
+        handCard.CopyCard(card);
+
+        int index = Array.IndexOf(hand, handCard);
+        GameData.instance.hand[index] = card;
     }
 }
