@@ -16,14 +16,14 @@ public class HandSelectionSystem : MonoBehaviour
     public HandCardDisplay handCardFour;
 
     [SerializeField]
-    private DeckListObject deckList;
+    //private DeckListObject deckList;
     private DeckScript deck;
     private HandScript hand;
 
     // Start is called before the first frame update
     void Start()
     {
-        deck = new DeckScript(deckList);
+        //deck = new DeckScript(deckList);
         hand = new HandScript();
     }
 
@@ -33,25 +33,6 @@ public class HandSelectionSystem : MonoBehaviour
         pickedCardDisplay = cardSelection.selectedCard;
         if (pickedCardDisplay != null)
         {
-            //draggableCard.OnEndDrag(eventData.pointerCurrentRaycast.gameObject);
-            //handCardOne.CopyCard(pickedCardDisplay.card);
-            /*if (handCardOne.card = null)
-            {
-                handCardOne.CopyCard(pickedCardDisplay.card);
-            }
-            else if (handCardOne.card != null)
-            {
-                handCardTwo.CopyCard(pickedCardDisplay.card);
-            }
-            else if (handCardOne.card != null && handCardTwo !=null)
-            {
-                handCardThree.CopyCard(pickedCardDisplay.card);
-            }
-            else if (handCardOne.card != null && handCardTwo != null && handCardThree != null)
-            {
-                handCardFour.CopyCard(pickedCardDisplay.card);
-            }*/
-
 
         }
     }

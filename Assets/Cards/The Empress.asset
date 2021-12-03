@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: The Empress
   m_EditorClassIdentifier: 
   name: The Empress
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: d43263ec37d14471b971523640ea68d2, type: 3}
   attack: 3
   defense: 13
   turnNo: 2

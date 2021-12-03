@@ -50,7 +50,4 @@ public class PlayerHandZone : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     }
 }
 
-/*public class PlayerDeckZone : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
-{
 
-}*/

@@ -7,6 +7,7 @@ using TMPro;
 public class CardDisplay : MonoBehaviour
 {
     public Card card;
+    private Card previousCard;
 
     public TMP_Text nameText;
 
@@ -16,12 +17,9 @@ public class CardDisplay : MonoBehaviour
     public TMP_Text defenseText;
     public TMP_Text turnNoText;
 
-    public int playerAttackValue;
-    public int playerDefenseValue;
-    public int enemyAttackValue;
-    public int enemyDefenseValue;
-    public string playerSuit;
-    public string enemySuit;
+    public int attackValue;
+    public int defenseValue;
+    public string suit;
 
     // Start is called before the first frame update
     void Start()
@@ -50,33 +48,39 @@ public class CardDisplay : MonoBehaviour
 
     public void CopyCardAttack()
     {
-        if (card != null)
+        if (card.name == "The Magician" && previousCard != null)
         {
-            playerAttackValue = card.attack;
+            card = previousCard;
         }
-        //print(playerAttackValue);
+        else
+        {
+            previousCard = card;
+        }
+        attackValue = card.attack;
+        
     }
     public void CopyCardDefense()
     {
-        playerDefenseValue = card.defense;
+        if (card.name == "The Magician" && previousCard != null)
+        {
+            card = previousCard;
+        }
+        else
+        {
+            previousCard = card;
+        }
+        if (card.name == "The Lovers" && previousCard != card)
+        {
+            defenseValue = card.defense * 2;
+        }
+        else
+        {
+            defenseValue = card.defense;
+        }
     }
     public void CopyCardSuit()
     {
-        playerSuit = card.suit;
-    }
-
-    public void CopyEnemyAttack()
-    {
-        enemyAttackValue = card.attack;
-    }
-    public void CopyEnemyDefense()
-    {
-        enemyDefenseValue = card.defense;
-        //print(enemyDefenseValue);
-    }
-    public void CopyEnemySuit()
-    {
-        enemySuit = card.suit;
+        suit = card.suit;
     }
 
 

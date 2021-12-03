@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
+    public GameObject inGameHelpPanel;
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -35,5 +38,15 @@ public class MainMenuController : MonoBehaviour
     public void Empress()
     {
         SceneManager.LoadScene(3);
+    }
+
+    //Tutorial/help buttons
+    public void InGameHelp()
+    {
+        inGameHelpPanel.SetActive(true);
+    }
+    public void InGameHelpClose()
+    {
+        inGameHelpPanel.SetActive(false);
     }
 }

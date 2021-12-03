@@ -29,23 +29,36 @@ public class CombatSystem : MonoBehaviour
     public Card selectedCard;
 
     [SerializeField]
-    private DeckListObject deckList;
+    //private DeckListObject deckList;
     private DeckScript deck;
     private HandScript hand;
+
+    public MainMenuController MainMenuControl;
 
     public TMP_Text turnText;
     public Image attackTurnImage;
     public Image defeneseTurnImage;
 
 
+    int water;
+    int earth;
+    int fire;
+    int air;
+
+
     void Start()
     {
 
         state = CombatState.START;
+
+        //if level is water 2, randomize enemy out of 3: the high priestess, the empress, the wheel of fortune
+
+
         StartCoroutine(SetupBattle());
 
-        deck = new DeckScript(deckList);
+        //deck = new DeckScript(deckList);
         hand = new HandScript();
+        playerUnit.damageMultiplier = 1;
     }
 
     void DisplayTurn()
@@ -91,22 +104,27 @@ public class CombatSystem : MonoBehaviour
     IEnumerator PlayerAttack()
     {
         playerCardDisplay.CopyCardAttack();
-        enemyCardDisplay.CopyEnemyDefense();
-
-        int result = playerCardDisplay.playerAttackValue - enemyCardDisplay.enemyDefenseValue;
+        enemyCardDisplay.CopyCardDefense();
+        Debug.Log($"player attack {playerCardDisplay.attackValue} enemy defend {enemyCardDisplay.defenseValue}");
+        int result = playerCardDisplay.attackValue - enemyCardDisplay.defenseValue;
         bool isDead = false;
         bool isPlayerDead = false;
 
         if (result > 0)
         {
-            Debug.Log("attack successful enemy takes damage");
-            isDead = enemyUnit.TakeDamage(playerUnit.damage);
+            //Debug.Log("attack successful enemy takes damage");
+            isDead = enemyUnit.TakeDamage(playerUnit.damage * playerUnit.damageMultiplier);
+            print(playerUnit.damageMultiplier);
+            playerUnit.damageMultiplier = 1;
+
         }
         else if (result < 0)
         {
-            Debug.Log("attack unsuccessful player takes damage");
+            //Debug.Log("attack unsuccessful player takes damage");
             isPlayerDead = playerUnit.TakeDamage(enemyUnit.damage);
         }
+
+        SuitCounter();
 
         enemyHUD.SetHP(enemyUnit.currentHP);
         playerHUD.SetHP(playerUnit.currentHP);
@@ -135,23 +153,27 @@ public class CombatSystem : MonoBehaviour
     IEnumerator PlayerDefend()
     {
         playerCardDisplay.CopyCardDefense();
-        playerCardDisplay.CopyEnemyAttack();
-
-        int result = playerCardDisplay.playerDefenseValue - enemyCardDisplay.enemyAttackValue;
+        enemyCardDisplay.CopyCardAttack();
+        Debug.Log($"enemy attack {enemyCardDisplay.attackValue} player defend {playerCardDisplay.defenseValue}");
+        int result = playerCardDisplay.defenseValue - enemyCardDisplay.attackValue;
 
         bool isDead = false;
         bool isPlayerDead = false;
 
         if (result > 0)
         {
-            Debug.Log("defense successful enemy takes damage");
-            isDead = enemyUnit.TakeDamage(playerUnit.damage);
+            //Debug.Log("defense successful enemy takes damage");
+            isDead = enemyUnit.TakeDamage(playerUnit.damage * playerUnit.damageMultiplier);
+            print(playerUnit.damageMultiplier);
+            playerUnit.damageMultiplier = 1;
         }
         else if (result < 0)
         {
-            Debug.Log("defense unsuccessful player takes damage");
+            //Debug.Log("defense unsuccessful player takes damage");
             isPlayerDead = playerUnit.TakeDamage(enemyUnit.damage);
         }
+
+        SuitCounter();
 
         enemyHUD.SetHP(enemyUnit.currentHP);
         playerHUD.SetHP(playerUnit.currentHP);
@@ -184,11 +206,20 @@ public class CombatSystem : MonoBehaviour
         {
             //dialogueText.text = "You won the battle!";
             Debug.Log("YOU WON");
+            GameData.instance.deck.Add(enemyCardDisplay.card);
+
+            MainMenuControl.StageSelect();
         }
         else if (state == CombatState.LOST)
         {
             //dialogueText.text = "You were defeated.";
             Debug.Log("YOU LOST");
+            if (GameData.instance.deck.Count > 2)
+            {
+                GameData.instance.deck.RemoveAt(Random.Range(0, GameData.instance.deck.Count));
+            }
+            MainMenuControl.StageSelect();
+
         }
     }
 
@@ -213,5 +244,69 @@ public class CombatSystem : MonoBehaviour
         playerCardUsageSystem.EndTurn();
     }
 
+    void SuitCounter()
+    {
+        playerCardDisplay.CopyCardSuit();
+        enemyCardDisplay.CopyCardSuit();
 
+
+        if (playerCardDisplay.suit == "Water")
+        {
+            water += 1;
+            earth = 0;
+            fire = 0;
+            air = 0;
+        }
+        if (playerCardDisplay.suit == "Earth")
+        {
+            earth += 1;
+            water = 0;
+            fire = 0;
+            air = 0;
+        }
+        if (playerCardDisplay.suit == "Fire")
+        {
+            fire += 1;
+            water = 0;
+            earth = 0;
+            air = 0;
+        }
+        if (playerCardDisplay.suit == "Air")
+        {
+            air += 1;
+            water = 0;
+            earth = 0;
+            fire = 0;
+            Debug.Log("aircounter + 1");
+        }
+
+        if (water > 1 && enemyCardDisplay.suit == "Earth")
+        {
+            playerUnit.damageMultiplier = 2;
+            //reset
+            water = 0;
+        }
+        if (earth > 1 && enemyCardDisplay.suit == "Fire")
+        {
+            playerUnit.damageMultiplier = 2;
+            earth = 0;
+        }
+        if (fire > 1 && enemyCardDisplay.suit == "Air")
+        {
+            playerUnit.damageMultiplier = 2;
+            fire = 0;
+        }
+        print($"{air} {enemyCardDisplay.suit}");
+        if (air > 1 && enemyCardDisplay.suit == "Water")
+        {
+            playerUnit.damageMultiplier = 2;
+            air = 0;
+            Debug.Log("double damage");
+        }
+
+
+        //make counters for each of the suits, when a suit is played increase by one
+        //if the same suit is played again count is 2 and damage is doubled
+        //if another suit is played the counter is set to 0 
+    }
 }

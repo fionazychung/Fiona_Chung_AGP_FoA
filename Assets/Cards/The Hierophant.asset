@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: The Hierophant
   m_EditorClassIdentifier: 
   name: The Hierophant
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: cb7ace8ab2e114dca925d14d0e3d7c33, type: 3}
   attack: 5
   defense: 5
   turnNo: 1

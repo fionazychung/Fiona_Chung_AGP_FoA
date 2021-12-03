@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCardUsageSystem : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class PlayerCardUsageSystem : MonoBehaviour
     public HandCardDisplay selectedCard;
     public CardDisplay cardDisplay;
     public HandCardDisplay [] hand;
-    public bool inGame = true;
 
+    public bool inGame = true;
     public bool cardHasLeftPlayerHandZone = false;
 
 
@@ -22,7 +23,6 @@ public class PlayerCardUsageSystem : MonoBehaviour
             for (int i = 0; i < 4; ++i)
             {
                 List<Card> dataHand = GameData.instance.hand;
-                List<HandCardDisplay> dataPlayingHand = GameData.instance.playingHand;
                 if (dataHand[i] != null)
                 {
                     //Debug.Log($"copy hand{i}");
@@ -56,6 +56,7 @@ public class PlayerCardUsageSystem : MonoBehaviour
                 if (card.countdownNo == 0)
                 {
                     card.GetComponent<CanvasGroup>().interactable = true;
+                    GameObject.Find("Canvas").GetComponent<Canvas>().transform.Find("TurnCountdownPanel").gameObject.SetActive(false);
                     card.turnCountdownText.text = "";
                 }
                 else
@@ -75,9 +76,12 @@ public class PlayerCardUsageSystem : MonoBehaviour
 
     internal void CopyCard(Card card, HandCardDisplay handCard)
     {
-        handCard.CopyCard(card);
+        if (handCard != null)
+        {
+            handCard.CopyCard(card);
 
-        int index = Array.IndexOf(hand, handCard);
-        GameData.instance.hand[index] = card;
+            int index = Array.IndexOf(hand, handCard);
+            GameData.instance.hand[index] = card;
+        }
     }
 }

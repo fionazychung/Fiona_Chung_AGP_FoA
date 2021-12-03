@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/CardSelection.unity
     guid: d333881a6a80f461991a3b8581192476
   - enabled: 1
-    path: Assets/Scenes/LvlEmpress.unity
+    path: Assets/Scenes/Water 2.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

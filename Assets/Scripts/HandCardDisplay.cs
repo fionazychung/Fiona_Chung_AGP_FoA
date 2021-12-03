@@ -25,6 +25,8 @@ public class HandCardDisplay : MonoBehaviour
     public int countdownNo;
     public string playerSuit;
 
+    public GameObject turnCdPanel;
+
     public CanvasGroup cvGroup;
 
     //public HandScript handScript;
@@ -84,6 +86,7 @@ public class HandCardDisplay : MonoBehaviour
         if (cvGroup != null)
         {
             cvGroup.interactable = false;
+            turnCdPanel.SetActive(true);
         }
         countdownNo = card.turnNo;
         if (turnCountdownText != null)
