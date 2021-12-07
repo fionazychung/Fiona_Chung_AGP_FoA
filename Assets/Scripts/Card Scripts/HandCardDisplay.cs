@@ -94,4 +94,12 @@ public class HandCardDisplay : MonoBehaviour
             turnCountdownText.text = countdownNo.ToString();
         }
     }
+
+    private void Update()
+    {
+        if (countdownNo == 0)
+        {
+            turnCdPanel.SetActive(false);
+        }
+    }
 }

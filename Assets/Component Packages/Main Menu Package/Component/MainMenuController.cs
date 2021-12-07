@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
     public GameObject inGameHelpPanel;
+    public GameObject deckInventory;
 
     public void PlayGame()
     {
@@ -48,5 +49,15 @@ public class MainMenuController : MonoBehaviour
     public void InGameHelpClose()
     {
         inGameHelpPanel.SetActive(false);
+    }
+
+    //View Deck
+    public void ViewDeck()
+    {
+        deckInventory.SetActive(true);
+    }
+    public void CloseDeckView()
+    {
+        deckInventory.SetActive(false);
     }
 }

@@ -11,6 +11,7 @@ public class PlayerCardUsageSystem : MonoBehaviour
     public HandCardDisplay selectedCard;
     public CardDisplay cardDisplay;
     public HandCardDisplay [] hand;
+    public Button turnButton;
 
     public bool inGame = true;
     public bool cardHasLeftPlayerHandZone = false;
@@ -41,7 +42,7 @@ public class PlayerCardUsageSystem : MonoBehaviour
         if (cardHasLeftPlayerHandZone)
         {
             cardDisplay.CopyCard(selectedCard.card);
-
+            turnButton.interactable = true;
         }
     }
 
@@ -56,12 +57,13 @@ public class PlayerCardUsageSystem : MonoBehaviour
                 if (card.countdownNo == 0)
                 {
                     card.GetComponent<CanvasGroup>().interactable = true;
-                    GameObject.Find("Canvas").GetComponent<Canvas>().transform.Find("TurnCountdownPanel").gameObject.SetActive(false);
+                    //GameObject.Find("Canvas").GetComponent<Canvas>().transform.Find("TurnCountdownPanel").gameObject.SetActive(false);
                     card.turnCountdownText.text = "";
                 }
                 else
                 {
                     card.turnCountdownText.text = card.countdownNo.ToString();
+                    //GameObject.Find("Canvas").GetComponent<Canvas>().transform.Find("TurnCountdownPanel").gameObject.SetActive(true);
                 }
             }
         }

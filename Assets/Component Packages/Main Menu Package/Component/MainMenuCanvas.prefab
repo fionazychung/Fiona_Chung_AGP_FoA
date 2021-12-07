@@ -206,7 +206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1250, y: 0}
   m_SizeDelta: {x: 1500, y: 2000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1469175003155785711
@@ -221,6 +221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c63b885fc40a4aac81b5c7ea0fe4a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inGameHelpPanel: {fileID: 0}
+  deckInventory: {fileID: 0}
 --- !u!1 &1469175003217158382
 GameObject:
   m_ObjectHideFlags: 0
