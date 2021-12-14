@@ -11,6 +11,7 @@ public class HandCardDisplay : MonoBehaviour
     public TMP_Text nameText;
 
     public Image artworkImage;
+    public Image suitImage;
 
     public TMP_Text attackText;
     public TMP_Text defenseText;
@@ -46,6 +47,7 @@ public class HandCardDisplay : MonoBehaviour
         nameText.text = card.name;
 
         artworkImage.sprite = card.artwork;
+        suitImage.sprite = card.suitIcon;
 
         attackText.text = card.attack.ToString();
         defenseText.text = card.defense.ToString();

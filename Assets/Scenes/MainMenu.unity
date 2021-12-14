@@ -503,14 +503,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Select the stage and then choose up to four cards.\n\nDefeat the opponent
-    through attack and defend turns. \n\nAttack Turn: \nCompare your attack to the
-    opponent's defence\n\nDefend Turn:\nCompare your defence to the opponent's attack\n\nIf
-    your values are greater than the opponent's you deal damage.\n\nOnce played the
-    card will need between 1-3 turns to recharge"
+  m_text: "Select the stage and then choose up to four cards.\n\n\nDefeat the opponent
+    through attack and defend turns. \n\n\nAttack Turn: \nCompare your attack to
+    the opponent's defence\n\n\nDefend Turn:\nCompare your defence to the opponent's
+    attack\n\n\nIf your values are greater than the opponent's you deal damage.\n\n\nOnce
+    played the card will need between 1-3 turns to recharge"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5874fa8479faa4a61b3040dd1cb87a93, type: 2}
-  m_sharedMaterial: {fileID: -5035232249095667650, guid: 5874fa8479faa4a61b3040dd1cb87a93,
+  m_fontAsset: {fileID: 11400000, guid: 26be1901c54994d7883c6b0e7886abea, type: 2}
+  m_sharedMaterial: {fileID: -5058351011052802393, guid: 26be1901c54994d7883c6b0e7886abea,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e8d80b74a4cb548cc896d2b0d384ed32, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2071,19 +2071,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fiona Chung
-
-
-    Audio - Lucie Pickering
-
-
-
-    Many thanks to...
-
-'
+  m_text: "CREDITS\n\nFiona Chung\n\nAudio - Lucie Pickering\n\nFonts - Hadijah by
+    Ridwanfil\n            Nadia by UI Creative\n\nMany thanks to...\n\n\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5874fa8479faa4a61b3040dd1cb87a93, type: 2}
-  m_sharedMaterial: {fileID: -5035232249095667650, guid: 5874fa8479faa4a61b3040dd1cb87a93,
+  m_fontAsset: {fileID: 11400000, guid: 26be1901c54994d7883c6b0e7886abea, type: 2}
+  m_sharedMaterial: {fileID: -5058351011052802393, guid: 26be1901c54994d7883c6b0e7886abea,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2763,6 +2755,247 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997189280}
   m_CullTransparentMesh: 0
+--- !u!1 &2131701315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131701317}
+  - component: {fileID: 2131701316}
+  - component: {fileID: 2131701318}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2131701316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131701315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bda5741790b47529e7a058dc650ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - clip: {fileID: 8300000, guid: ea41f63fb00b140e4b10a3844c3e5ccf, type: 3}
+    name: ATMOS_EarthHover
+    loop: 1
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 0ef3bb915e77e41009844a2567ed8322, type: 3}
+    name: ATMOS_FireHover
+    loop: 1
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 0e74bcd84af6142c681524908819ce10, type: 3}
+    name: ATMOS_WaterHover
+    loop: 1
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: f448475080d2e43a1a4b4b6e300fc2f2, type: 3}
+    name: ATMOS_WindHover
+    loop: 1
+    volume: 0.5
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 78d2ea5bf942540e297a5a2457a90918, type: 3}
+    name: MX_1
+    loop: 1
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 34fef2aea2d814730824a7f494794d5d, type: 3}
+    name: SFX_Click_1
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: b1607a2d1c83542d68e15c4df3c2e164, type: 3}
+    name: SFX_Click_2
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 3604f69c714e34c10922260f4050f81e, type: 3}
+    name: SFX_EarthHover
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 589a3d06ef7f64687881e85e9ab1d18c, type: 3}
+    name: SFX_FireHover
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 797a1021ebcd7433d8f2a4acf66b2eae, type: 3}
+    name: SFX_HP_Loss
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 849ef98d5b20949f9b32fcbf82b03329, type: 3}
+    name: SFX_HP_Loss_2
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: e6217270aef3e4c8fb0398b47e9c9deb, type: 3}
+    name: SFX_PickUpCard_1
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: ca9c4458e436d455faa51591eb262678, type: 3}
+    name: SFX_PickUpCard_2
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 6160457eb551d428e9647f55d9cbc17b, type: 3}
+    name: SFX_PickUpCard_3
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 47946df3f3a9246bfaf5c791df8633dd, type: 3}
+    name: SFX_PlaceCard_1
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 2491cc3bf40234c838f48b59260652f5, type: 3}
+    name: SFX_PlaceCard_2
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 0be62df531b6e44049ac50a965b96895, type: 3}
+    name: SFX_PlaceCard_3
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 13b197a6584864635bf450df3c74e9f4, type: 3}
+    name: SFX_PlaceCard_4
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 55f010a8c7fc4486c922b0c8c1c1ac69, type: 3}
+    name: SFX_WaterHover
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 658557bdf91d64b57b78171e61bb1c43, type: 3}
+    name: SFX_WindHover
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+--- !u!4 &2131701317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131701315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1585.9148, y: 693.2377, z: -3864.7847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2131701318
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131701315}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 78d2ea5bf942540e297a5a2457a90918, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2143570931
 GameObject:
   m_ObjectHideFlags: 0
@@ -3078,6 +3311,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469175004350608197, guid: c99dd72d2808041e7a08bae8a2a044c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469175004350608197, guid: c99dd72d2808041e7a08bae8a2a044c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469175004350608197, guid: c99dd72d2808041e7a08bae8a2a044c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469175004350608197, guid: c99dd72d2808041e7a08bae8a2a044c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2131701316}
+    - target: {fileID: 1469175004350608197, guid: c99dd72d2808041e7a08bae8a2a044c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469175004350608197, guid: c99dd72d2808041e7a08bae8a2a044c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1469175004648648201, guid: c99dd72d2808041e7a08bae8a2a044c4,
         type: 3}

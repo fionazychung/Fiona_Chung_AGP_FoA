@@ -20,6 +20,8 @@ public class UIPopup : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (popupOn == true)
         {
             popupImg.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("SFX_FireHover");
+            //Debug.Log("Played");
         }
         else
         {

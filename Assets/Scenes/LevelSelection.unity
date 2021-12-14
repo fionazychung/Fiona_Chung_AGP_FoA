@@ -969,12 +969,15 @@ MonoBehaviour:
   m_text: 'Select the stage to challenge.
 
 
-    Once the stage is selected, you can
-    choose which of your deck cards to challenge the opponent with.
+
+    Once the stage is selected, you
+    can choose which of your deck cards to challenge the opponent with.
+
 
 
     Information
     on the stage is displayed in the pop-up above the stage.
+
 
 
     In the bottom
@@ -982,16 +985,16 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5874fa8479faa4a61b3040dd1cb87a93, type: 2}
-  m_sharedMaterial: {fileID: -5035232249095667650, guid: 5874fa8479faa4a61b3040dd1cb87a93,
+  m_fontAsset: {fileID: 11400000, guid: 26be1901c54994d7883c6b0e7886abea, type: 2}
+  m_sharedMaterial: {fileID: -5058351011052802393, guid: 26be1901c54994d7883c6b0e7886abea,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286937459
-  m_fontColor: {r: 0.45098042, g: 0.47450984, b: 0.52156866, a: 1}
+    rgba: 4285488725
+  m_fontColor: {r: 0.33365968, g: 0.3670939, b: 0.4339623, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2574,8 +2577,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deck:
   - {fileID: 11400000, guid: de788b62036ae4a76a32e21eae88140f, type: 2}
-  - {fileID: 11400000, guid: 2008d995e8701437c897d5c37be6f760, type: 2}
   - {fileID: 11400000, guid: a7749382001c141e0ab6dc8c2f50b907, type: 2}
+  - {fileID: 11400000, guid: 2008d995e8701437c897d5c37be6f760, type: 2}
   - {fileID: 11400000, guid: 95afaf91bce3548ce98a92d489e70f38, type: 2}
   - {fileID: 11400000, guid: 3809db20b60644e968c386b1dbe0f3db, type: 2}
   hand:

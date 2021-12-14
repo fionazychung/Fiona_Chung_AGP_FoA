@@ -413,7 +413,7 @@ PrefabInstance:
         type: 3}
       propertyPath: card
       value: 
-      objectReference: {fileID: 11400000, guid: 95afaf91bce3548ce98a92d489e70f38,
+      objectReference: {fileID: 11400000, guid: a7749382001c141e0ab6dc8c2f50b907,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 195ffc5419106471e8019381de5398a6, type: 3}
@@ -727,6 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inGameHelpPanel: {fileID: 1081062029}
+  deckInventory: {fileID: 0}
 --- !u!4 &220933815
 Transform:
   m_ObjectHideFlags: 0
@@ -1092,10 +1093,12 @@ MonoBehaviour:
   m_text: 'If your values are greater than the opponent''s you deal damage.
 
 
+
     Attack
     Turn:
 
     Compare your attack to the opponent''s defence
+
 
 
     Defend Turn:
@@ -1109,10 +1112,11 @@ MonoBehaviour:
     select it.
 
 
+
     Once played the card will need between 1-3 turns to recharge'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5874fa8479faa4a61b3040dd1cb87a93, type: 2}
-  m_sharedMaterial: {fileID: -5035232249095667650, guid: 5874fa8479faa4a61b3040dd1cb87a93,
+  m_fontAsset: {fileID: 11400000, guid: 26be1901c54994d7883c6b0e7886abea, type: 2}
+  m_sharedMaterial: {fileID: -5058351011052802393, guid: 26be1901c54994d7883c6b0e7886abea,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

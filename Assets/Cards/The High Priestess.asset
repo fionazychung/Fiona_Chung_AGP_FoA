@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: The High Priestess
   artwork: {fileID: 21300000, guid: 3f19c35618cce496e89d96ce0f2cf6af, type: 3}
+  suitIcon: {fileID: 21300000, guid: f9b59dc88d31748bc8c847ceb69eb7dd, type: 3}
   attack: 2
   defense: 12
   turnNo: 2
