@@ -44,7 +44,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             returnPosition = transform.position;
             cvGroup.blocksRaycasts = false;
         }
-
+        FindObjectOfType<AudioManager>().GetRandomPickCardSound();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -80,6 +80,8 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                     PickedCard = cardSelection.selectedCard.card;
                 }
             }
+            //FindObjectOfType<AudioManager>().PlaySounds("SFX_PlaceCard_1");
+            FindObjectOfType<AudioManager>().GetRandomPlaceCardSound();
 
             cvGroup.blocksRaycasts = true;
             transform.position = returnPosition;

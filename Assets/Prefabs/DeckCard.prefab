@@ -164,6 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupImg: {fileID: 162375975324570578}
   popupOn: 0
+  cardDisplay: {fileID: 42290862034157462}
+  handCardDisplay: {fileID: 0}
 --- !u!1 &162375975324570578
 GameObject:
   m_ObjectHideFlags: 0

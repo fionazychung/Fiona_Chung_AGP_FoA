@@ -13,6 +13,7 @@ public class Sound
     public float volume;
     //[Range(.1f, 3f)]
     private float pitch = 1f;
+    public AudioMixerGroup mixer;
 
     //output mixer 
 

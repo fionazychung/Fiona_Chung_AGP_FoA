@@ -1664,6 +1664,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1777491224}
+        m_MethodName: ButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &822184813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2045,6 +2056,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1138787}
         m_MethodName: InGameHelpClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1777491224}
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2924,6 +2946,87 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inGameHelpPanel: {fileID: 0}
   deckInventory: {fileID: 0}
+--- !u!1001 &1777491223
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7459638245928335090, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459638245928335092, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1585.9148
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459638245928335092, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 693.2377
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459638245928335092, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3864.7847
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459638245928335092, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459638245928335092, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459638245928335092, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459638245928335092, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459638245928335092, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459638245928335092, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459638245928335092, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459638245928335092, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dce365dbd95a347d29d6c9a3c2b9873b, type: 3}
+--- !u!114 &1777491224 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7459638245928335093, guid: dce365dbd95a347d29d6c9a3c2b9873b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1777491223}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bda5741790b47529e7a058dc650ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1786944742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3370,6 +3473,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1777491224}
+        m_MethodName: ButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1840384688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3717,6 +3831,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1777491224}
+        m_MethodName: ButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1962040731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3838,6 +3963,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1138787}
         m_MethodName: ViewDeck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1777491224}
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

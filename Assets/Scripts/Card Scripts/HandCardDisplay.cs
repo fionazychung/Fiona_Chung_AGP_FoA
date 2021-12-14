@@ -97,6 +97,12 @@ public class HandCardDisplay : MonoBehaviour
         }
     }
 
+    public void CopyHandCardSuit()
+    {
+        playerSuit = card.suit;
+    }
+
+
     private void Update()
     {
         if (countdownNo == 0)

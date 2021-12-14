@@ -122,6 +122,7 @@ public class CombatSystem : MonoBehaviour
         {
             //Debug.Log("attack unsuccessful player takes damage");
             isPlayerDead = playerUnit.TakeDamage(enemyUnit.damage);
+            FindObjectOfType<AudioManager>().PlaySounds("SFX_HP_Loss_2");
         }
 
         SuitCounter();
@@ -171,6 +172,7 @@ public class CombatSystem : MonoBehaviour
         {
             //Debug.Log("defense unsuccessful player takes damage");
             isPlayerDead = playerUnit.TakeDamage(enemyUnit.damage);
+            FindObjectOfType<AudioManager>().PlaySounds("SFX_HP_Loss_2");
         }
 
         SuitCounter();
