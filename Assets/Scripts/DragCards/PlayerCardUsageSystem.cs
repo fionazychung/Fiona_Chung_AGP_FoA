@@ -80,6 +80,12 @@ public class PlayerCardUsageSystem : MonoBehaviour
     {
         if (handCard != null)
         {
+            for (int i = 0; i < GameData.instance.hand.Count; i++)
+            {
+                if (GameData.instance.hand[i] == card)
+                    return;
+            }
+
             handCard.CopyCard(card);
 
             int index = Array.IndexOf(hand, handCard);

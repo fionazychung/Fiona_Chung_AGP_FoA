@@ -30,6 +30,10 @@ public class MainMenuController : MonoBehaviour
     public void StageSelect()
     {
         SceneManager.LoadScene(1);
+        for (int i = 0; i < GameData.instance.hand.Count; i++)
+        {
+            GameData.instance.hand[i] = null;
+        }
         FindObjectOfType<AudioManager>().GetRandomButtonClickSound();
     }
 
@@ -43,6 +47,15 @@ public class MainMenuController : MonoBehaviour
 
     public void Empress()
     {
+        int count = 0;
+        for (int i = 0; i < GameData.instance.hand.Count; i++)
+        {
+            if (GameData.instance.hand[i] != null)
+                count++;
+        }
+        if (count < 2)
+            return;
+
         SceneManager.LoadScene(3);
         FindObjectOfType<AudioManager>().GetRandomButtonClickSound();
     }

@@ -113,7 +113,7 @@ public class CombatSystem : MonoBehaviour
         if (result > 0)
         {
             //Debug.Log("attack successful enemy takes damage");
-            isDead = enemyUnit.TakeDamage(playerUnit.damage * playerUnit.damageMultiplier);
+            isDead = enemyUnit.TakeDamage(result);
             print(playerUnit.damageMultiplier);
             playerUnit.damageMultiplier = 1;
 
@@ -121,7 +121,7 @@ public class CombatSystem : MonoBehaviour
         else if (result < 0)
         {
             //Debug.Log("attack unsuccessful player takes damage");
-            isPlayerDead = playerUnit.TakeDamage(enemyUnit.damage);
+            isPlayerDead = playerUnit.TakeDamage(-result);
             FindObjectOfType<AudioManager>().PlaySounds("SFX_HP_Loss_2");
         }
 
@@ -164,14 +164,14 @@ public class CombatSystem : MonoBehaviour
         if (result > 0)
         {
             //Debug.Log("defense successful enemy takes damage");
-            isDead = enemyUnit.TakeDamage(playerUnit.damage * playerUnit.damageMultiplier);
+            isDead = enemyUnit.TakeDamage(result);
             print(playerUnit.damageMultiplier);
             playerUnit.damageMultiplier = 1;
         }
         else if (result < 0)
         {
             //Debug.Log("defense unsuccessful player takes damage");
-            isPlayerDead = playerUnit.TakeDamage(enemyUnit.damage);
+            isPlayerDead = playerUnit.TakeDamage(-result);
             FindObjectOfType<AudioManager>().PlaySounds("SFX_HP_Loss_2");
         }
 

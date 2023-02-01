@@ -11,10 +11,14 @@ public class CombatHUD : MonoBehaviour
     {
         hpSlider.maxValue = unit.maxHP;
         hpSlider.value = unit.currentHP;
+        SetHP(unit.currentHP);
     }
 
     public void SetHP(int hp)
     {
         hpSlider.value = hp;
+
+        BarSlider barSlider = GetComponentInChildren<BarSlider>();
+        barSlider.SetBarValue(hp);
     }
 }
