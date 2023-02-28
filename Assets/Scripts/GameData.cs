@@ -8,9 +8,8 @@ public class GameData : MonoBehaviour
 
     public List<Card> deck;
     public List<Card> hand = new List<Card>(4);
-    public List<HandCardDisplay> playingHand;
 
-    public HandScript handScript;
+    //Test Comment
 
     private void Awake()
     {
@@ -24,11 +23,4 @@ public class GameData : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void Start()
-    {
-
-
-    }
-
 }
