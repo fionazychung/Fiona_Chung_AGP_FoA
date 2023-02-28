@@ -65,13 +65,13 @@ public class CombatSystem : MonoBehaviour
     {
         if (state == CombatState.ATTACKTURN)
         {
-            turnText.text = "ATTACK";
+            turnText.text = "attack";
             attackTurnImage.enabled = true;
             defeneseTurnImage.enabled = false;
         }
         else
         {
-            turnText.text = "DEFEND";
+            turnText.text = "defend";
             defeneseTurnImage.enabled = true;
             attackTurnImage.enabled = false;
         }
