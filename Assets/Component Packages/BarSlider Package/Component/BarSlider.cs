@@ -19,6 +19,7 @@ public class BarSlider : MonoBehaviour
 
     public void SetBarValue (int barValue)
     {
+
         fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 
