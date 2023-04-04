@@ -47,13 +47,14 @@ public class MainMenuController : MonoBehaviour
 
     public void Empress()
     {
+        Debug.Log("Loading Combat Scene");
         int count = 0;
         for (int i = 0; i < GameData.instance.hand.Count; i++)
         {
             if (GameData.instance.hand[i] != null)
                 count++;
         }
-        if (count < 2)
+        if (count < 2) 
             return;
 
         SceneManager.LoadScene(3);
